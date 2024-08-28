@@ -16,6 +16,7 @@ function clearBoard() {
         gameBoard[i].textContent = '';
     }
     gameEnd = false;
+    turnInfo.textContent = 'X TURN';
 }
 
 let resetButton = document.querySelector('button')
@@ -38,90 +39,90 @@ for(let i=0; i<9; i++) {
         }
         //winning check = X won
         if(gameBoard[0].textContent === 'X' && gameBoard[1].textContent === 'X' && gameBoard[2].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[3].textContent === 'X' && gameBoard[4].textContent === 'X' && gameBoard[5].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[6].textContent === 'X' && gameBoard[7].textContent === 'X' && gameBoard[8].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[0].textContent === 'X' && gameBoard[3].textContent === 'X' && gameBoard[6].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[1].textContent === 'X' && gameBoard[4].textContent === 'X' && gameBoard[7].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[2].textContent === 'X' && gameBoard[5].textContent === 'X' && gameBoard[8].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[0].textContent === 'X' && gameBoard[4].textContent === 'X' && gameBoard[8].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         else if(gameBoard[2].textContent === 'X' && gameBoard[4].textContent === 'X' && gameBoard[6].textContent === 'X') {
-            alert(`X won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'X Won! Congrats!'
         }
         //winning check = O won
         if(gameBoard[0].textContent === 'O' && gameBoard[1].textContent === 'O' && gameBoard[2].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[3].textContent === 'O' && gameBoard[4].textContent === 'O' && gameBoard[5].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
        else if(gameBoard[6].textContent === 'O' && gameBoard[7].textContent === 'O' && gameBoard[8].textContent === 'O') {
-           alert(`O won`);
-           activePlayer = player1;
-           gameEnd = true;
+        activePlayer = player1;
+        gameEnd = true;
+        turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[0].textContent === 'O' && gameBoard[3].textContent === 'O' && gameBoard[6].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[1].textContent === 'O'&& gameBoard[4].textContent === 'O'&& gameBoard[7].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[2].textContent === 'O' && gameBoard[5].textContent === 'O' && gameBoard[8].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
-            clearBoard();
+            gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[0].textContent === 'O' && gameBoard[4].textContent === 'O' && gameBoard[8].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         else if(gameBoard[2].textContent === 'O' && gameBoard[4].textContent === 'O' && gameBoard[6].textContent === 'O') {
-            alert(`O won`);
             activePlayer = player1;
             gameEnd = true;
+            turnInfo.textContent = 'O Won! Congrats!'
         }
         //Draw Check
         if(internalBoard.includes('') == false) {
-            alert('Draw!')
             gameEnd = true;
+            turnInfo.textContent = "Draw! Press the 'RESET BOARD' to play again."
         }
     })
 }
