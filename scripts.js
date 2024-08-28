@@ -33,10 +33,7 @@ for(let i=0; i<9; i++) {
             activePlayer = player2;
             turnInfo.textContent = 'O TURN';
         }
-        else {
-            activePlayer = player1;
-            turnInfo.textContent = 'X TURN';
-        }
+        
         //winning check = X won
         if(gameBoard[0].textContent === 'X' && gameBoard[1].textContent === 'X' && gameBoard[2].textContent === 'X') {
             activePlayer = player1;
