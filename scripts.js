@@ -15,16 +15,6 @@ function clearBoard() {
     }
 }
 
-function changePlayer() {
-//change active player
-if (activePlayer == player1) {
-    activePlayer = player2;
-}
-else {
-    activePlayer = player1;
-}
-}
-
 for(let i=0; i<9; i++) {
     gameBoard[i].addEventListener('click', function() {
         gameBoard[i].textContent = activePlayer;
