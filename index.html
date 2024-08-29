@@ -9,20 +9,32 @@
 </head>
 <body>
     <h1>TIC TAC TOE GAME</h1> <br><br>
-    <div class="board-container">
-        <div class="board-outer-border">
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>
-            <div class="board-pixel"></div>    
+    <form class="new-players">
+        <label for="player-1-name">Player 1 name (X): </label>
+        <input type="text" name="player-1-name" id="player-1-name" required />
+        <label for="player-2-name">Player 2 name (O): </label>
+        <input type="text" name="player-2-name" id="player-2-name" required />
+        <button type="submit" class="game-start">Let's Play</button>
+        <!--<input type="submit" class="game-start" value="Let's Play">-->
+    </form>
+    <div class="hide-board" style="display: none;">
+        <div class="board-container">
+            <div class="score-x">Score X: 0</div>
+            <div class="board-outer-border">
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>
+                <div class="board-pixel"></div>    
+            </div>
+            <div class="score-y">Score O: 0</div>
         </div>
+        <button class="reset-btn">Reset Board</button>
+        <h2 class="turn-info"></h2>
     </div>
-    <button>Reset Board</button>
-    <h2 class="turn-info">X TURN</h2>
 </body>
 </html>
