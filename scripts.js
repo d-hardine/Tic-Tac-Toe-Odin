@@ -37,7 +37,8 @@ function createPlayer(name) {
     let score = 0;
     const getScore = function() {return score} //same like const getScore = () => score
     const giveScore = () => score++;
-    return {playerName, getScore, giveScore};
+    const resetScore = function() {return score = 0};
+    return {playerName, getScore, giveScore, resetScore};
 }
 
 const player2 = 'O';
@@ -100,7 +101,7 @@ for(let i=0; i<9; i++) {
             activePlayer = players[0].pawnName;
             gameEnd = true;
             turnInfo.textContent = `${players[1].playerName} Won! Congrats!`
-            players[0].giveScore();
+            players[1].giveScore();
             scoreY.textContent = `${players[1].playerName} (Y) Score: ${players[1].getScore()}`;
         }
 
